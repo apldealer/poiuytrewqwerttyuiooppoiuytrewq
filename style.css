@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: #060606;
+  color: white;
+  margin-top: 60px; /* To prevent content from hiding behind the navbar */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.navbar {
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #060606;
+  border: 1px solid #282828;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .auth-links ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  right: 255px;
+}
+
+.navbar .auth-links li {
+  margin-left: 22px;
+}
+
+#tt {
+  position: relative;
+  left: 5px;
+}
+
+p {
+  position: relative;
+  left: 57px;
+  bottom: 68px;
+}
+
+a {
+  color: #888888;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: gray;
+}
+
+a.active {
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px; /* Adjust for fixed navbar height */
+  padding: 20px;
+  color: white;
+}
+
+
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 50%; /* Adjust as needed */
+  left: 20px; /* Position to the left */
+  transform: translateY(-150%);
+}
+
+
+.testing {
+  position: relative;
+  left: 71px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(165, 165, 165);
+}
+
+
+.social-icons .icon {
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.848); /* Ensure icon color is set */
+}
+
+.social-icons .icon:hover {
+  color: #888888; /* Adjust hover color as needed */
+}
+
+
+.social-icons .social-text {
+  color: rgb(165, 165, 165);
+  font-size: 16px;
+  margin-left: 9px;
+}
+
+.social-text {
+  position: relative;
+  top: 20px;
+  right: 10px;
+}
+
+#tt {
+  position: relative;
+  left: 55px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 39px;
+  font-weight: 100;
+  position: relative;
+  top: 39px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.explain {
+  font-size: 24px;
+  width: 20em;
+  top: 39px;
+  padding: 50px;
+  position: relative;
+  margin: auto;
+  left: 7px;
+  text-align: center;
+}
+
+.shop-now-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  top: 10px;
+}
+
+.shop-now-button button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-button button:hover {
+  background-color: white;
+  color: #000;
+}
+
+.discount-text {
+  color: #ffffffc2;
+  text-align: center;
+  position: relative;
+  margin-bottom: 53px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #060606;
+    border-color: #282828;
+    border: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .auth-links {
+    display: flex;
+    margin-right: 15em;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 47px;
+    left: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    left: 167px;
+    top: 50px;
+    position: relative;
+  }
+  
+  video {
+    width: 250px;
+    position: relative;
+    top: 60px;
+  }
+
+  .container {
+    padding: 10px;
+    margin-top: 50px; /* Adjust for fixed navbar height */
+  }
+  
+  h1 {
+    font-size: 28px;
+    top: 20px;
+  }
+  
+  .explain {
+    font-size: 18px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    right: 25px;
+    top: 20px;
+  }
+  
+  .shop-now-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    top: 10px;
+  }
+  
+  .shop-now-button button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .shop-now-button button:hover {
+    background-color: white;
+    color: #000;
+  }
+  
+  .discount-text {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  video {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    width: 30%;
+  }
+  
+
+  
+  @media (max-width: 600px) {
+    .navbar {
+      display: flex;
+      height: 50px;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #060606;
+      border-color: #282828;
+      border: none;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .auth-links {
+      display: flex;
+      margin-right: 15em;
+    }
+  
+    ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      position: relative;
+      bottom: 47px;
+      left: 50px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      margin-left: 0;
+      margin-bottom: 10px;
+      left: 167px;
+      top: 50px;
+      position: relative;
+    }
+    
+    video {
+      width: 250px;
+      position: relative;
+      top: 60px;
+    }
+  
+    .container {
+      padding: 10px;
+      margin-top: 50px; /* Adjust for fixed navbar height */
+    }
+    
+    h1 {
+      font-size: 28px;
+      top: 20px;
+    }
+    
+    .explain {
+      font-size: 18px;
+      width: 100%;
+      padding: 20px;
+      position: relative;
+      right: 25px;
+      top: 20px;
+    }
+    
+    .shop-now-button button {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  
+    .discount-text {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .social-icons {
+      transform: translateY(0);
+      position: fixed;
+      margin-top: 80px;
+    }
+
+  }
+}  
