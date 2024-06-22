@@ -3,7 +3,7 @@
 * {
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif; /* Change to Google Font */
 }
 
 ::-webkit-scrollbar {
@@ -13,10 +13,11 @@
 body {
   background: #060606;
   color: white;
-  margin-top: 60px; /* To prevent content from hiding behind the navbar */
+  margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow-y: auto;
 }
 
@@ -46,17 +47,6 @@ body {
   margin-left: 22px;
 }
 
-#tt {
-  position: relative;
-  left: 5px;
-}
-
-p {
-  position: relative;
-  left: 57px;
-  bottom: 68px;
-}
-
 a {
   color: #888888;
   font-size: 14px;
@@ -75,94 +65,85 @@ a.active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0px; /* Adjust for fixed navbar height */
-  padding: 20px;
+  justify-content: center;
   color: white;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px; /* Added padding for better spacing on mobile */
 }
-
-
 
 .social-icons {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  position: fixed;
-  top: 50%; /* Adjust as needed */
-  left: 20px; /* Position to the left */
-  transform: translateY(-150%);
-}
-
-
-.testing {
+  align-items: flex-start;
   position: relative;
-  left: 71px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(165, 165, 165);
-}
-
+  top: 90px;
+  margin-right: 20px;
+  align-self: flex-start;
+} /*icon whole container*/
 
 .social-icons .icon {
   margin-bottom: 10px;
   font-size: 24px;
   text-decoration: none;
   transition: color 0.3s ease;
-  color: rgba(255, 255, 255, 0.848); /* Ensure icon color is set */
+  color: rgba(255, 255, 255, 0.848);
 }
 
 .social-icons .icon:hover {
-  color: #888888; /* Adjust hover color as needed */
-}
-
-
-.social-icons .social-text {
-  color: rgb(165, 165, 165);
-  font-size: 16px;
-  margin-left: 9px;
+  color: #888888;
 }
 
 .social-text {
-  position: relative;
-  top: 20px;
-  right: 10px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: rgb(165, 165, 165);
 }
 
-#tt {
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   position: relative;
-  left: 55px;
+  bottom: 200px;
 }
 
 h1 {
-  text-align: center;
   color: white;
   font-size: 39px;
   font-weight: 100;
-  position: relative;
-  top: 39px;
+  margin-top: 199px;
+  margin-bottom: 50px;
 }
 
 p {
   font-size: 14px;
 }
 
+h2 {
+  width: 20em;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  left: 230px;
+}
+
 .explain {
   font-size: 24px;
   width: 20em;
-  top: 39px;
   padding: 50px;
-  position: relative;
-  margin: auto;
-  left: 7px;
   text-align: center;
+  justify-content: center;
 }
 
 .shop-now-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   overflow: hidden;
   z-index: 1;
-  top: 10px;
+  margin-top: 27px;
 }
 
 .shop-now-button button {
@@ -183,194 +164,46 @@ p {
 .discount-text {
   color: #ffffffc2;
   text-align: center;
+  margin-top: 149px;
+  top: 20px;
+  width: 890px;
   position: relative;
-  margin-bottom: 53px;
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    display: flex;
-    height: 50px;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #060606;
-    border-color: #282828;
-    border: none;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .auth-links {
-    display: flex;
-    margin-right: 15em;
+/* Media Queries for Mobile Devices */
+
+@media screen and (max-width: 768px) {
+  .navbar .auth-links ul {
+    right: 0; /* Adjusted position for mobile */
   }
 
-  ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    position: relative;
-    bottom: 47px;
-    left: 50px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    margin-left: 0;
-    margin-bottom: 10px;
-    left: 167px;
-    top: 50px;
-    position: relative;
-  }
-  
-  video {
-    width: 250px;
-    position: relative;
-    top: 60px;
+  .content {
+    bottom: 0; /* Adjusted position for mobile */
   }
 
-  .container {
-    padding: 10px;
-    margin-top: 50px; /* Adjust for fixed navbar height */
-  }
-  
-  h1 {
-    font-size: 28px;
-    top: 20px;
-  }
-  
-  .explain {
-    font-size: 18px;
-    width: 100%;
-    padding: 20px;
-    position: relative;
-    right: 25px;
-    top: 20px;
-  }
-  
-  .shop-now-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    top: 10px;
-  }
-  
-  .shop-now-button button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .shop-now-button button:hover {
-    background-color: white;
-    color: #000;
-  }
-  
-  .discount-text {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #ffffff;
+  .title {
     text-align: center;
+    width: 100%; /* Adjusted width to full width for mobile */
+    max-width: 470px; /* Added max-width for better responsiveness */
+    margin: auto;
+    border: 1px solid green;
+    padding: 10px; /* Added padding for better spacing */
   }
-  
-  video {
+
+  h2 {
+    font-size: 16px;
+    left: 0; /* Adjusted position for mobile */
+  }
+
+  .social-icons {
     display: flex;
-    justify-content: center;
-    margin: 15px auto;
-    width: 30%;
+    flex-direction: column; /* Change to vertical for mobile */
+    align-items: center; /* Center icons horizontally */
+    justify-content: center; /* Center icons vertically */
+    margin-top: 20px; /* Add top margin for spacing */
   }
-  
 
-  
-  @media (max-width: 600px) {
-    .navbar {
-      display: flex;
-      height: 50px;
-      justify-content: flex-end;
-      align-items: center;
-      background-color: #060606;
-      border-color: #282828;
-      border: none;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-    
-    .auth-links {
-      display: flex;
-      margin-right: 15em;
-    }
-  
-    ul {
-      list-style-type: none;
-      display: flex;
-      align-items: center;
-      position: relative;
-      bottom: 47px;
-      left: 50px;
-      margin: 0;
-      padding: 0;
-    }
-    
-    li {
-      margin-left: 0;
-      margin-bottom: 10px;
-      left: 167px;
-      top: 50px;
-      position: relative;
-    }
-    
-    video {
-      width: 250px;
-      position: relative;
-      top: 60px;
-    }
-  
-    .container {
-      padding: 10px;
-      margin-top: 50px; /* Adjust for fixed navbar height */
-    }
-    
-    h1 {
-      font-size: 28px;
-      top: 20px;
-    }
-    
-    .explain {
-      font-size: 18px;
-      width: 100%;
-      padding: 20px;
-      position: relative;
-      right: 25px;
-      top: 20px;
-    }
-    
-    .shop-now-button button {
-      padding: 8px 16px;
-      font-size: 16px;
-    }
-  
-    .discount-text {
-      font-size: 14px;
-      margin-top: 5px;
-    }
-
-    .social-icons {
-      transform: translateY(0);
-      position: fixed;
-      margin-top: 80px;
-    }
-
+  .social-icons .icon {
+    margin-bottom: 10px; /* Adjust spacing between icons */
   }
-}  
+}
