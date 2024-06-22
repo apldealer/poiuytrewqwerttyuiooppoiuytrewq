@@ -277,20 +277,21 @@ a.active {
 
 @media (max-width: 790px) {
   .comments-heading span {
+    margin-top: 609em;
     font-size: 1.1rem; /* Adjust heading size for smaller screens */
   }
 }
 
-@media (max-width: 340px) {
-  .comments-heading span {
-    font-size: 1rem; /* Further adjust heading size for very small screens */
-  }
-}
 
 @media (max-width: 790px) {
   .comments-box {
     width: calc(100% - 30px); /* Adjust for smaller screens */
     margin: 15px;
+  }
+
+  .comments-heading {
+    position: relative;
+    margin-top: 490px;
   }
 
   .comments-heading h4 {
